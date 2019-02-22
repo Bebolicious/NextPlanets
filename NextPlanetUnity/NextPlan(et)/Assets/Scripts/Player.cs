@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Speed", Mathf.Abs(x));
+        
 
         moveDelta = new Vector3(x, y, 0);
         if (moveDelta.x > 0)
