@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 public class WeatherCload : MonoBehaviour
 {
-    private const string API_KEY = "b45754393a85ca457643c4d0ba1951e4";
+    private const string API_KEY = "91dbd6f2dc24ab132e13385fdb3631a6";
     private const float API_CHECK_MAXTIME = 10 * 60.0f; //10 minutes
     public GameObject SnowSystem;
     public string CityId; // Göteborg = 2711537
@@ -42,7 +42,7 @@ public class WeatherCload : MonoBehaviour
     }
     private async Task<WeatherInfo> GetWeather()
     {
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(String.Format("http://api.openweathermap.org/data/2.5/weather?id=" + CityId + "&APPID=b45754393a85ca457643c4d0ba1951e4"));
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(String.Format("api.openweathermap.org/data/2.5/weather?q=London"));
         HttpWebResponse response = (HttpWebResponse)(await request.GetResponseAsync());
         StreamReader reader = new StreamReader(response.GetResponseStream());
         string jsonResponse = reader.ReadToEnd();
