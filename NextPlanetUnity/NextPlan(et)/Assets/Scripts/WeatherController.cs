@@ -22,6 +22,7 @@ public class WeatherController : MonoBehaviour
         void Start()
         {
         CheckSnowStatusAsync();
+        
         }
         void Update()
         {
