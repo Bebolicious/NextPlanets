@@ -7,20 +7,17 @@ public class Player : MonoBehaviour
     private BoxCollider2D boxCollider;
     protected Vector3 moveDelta;
     private RaycastHit2D hit;
-    public Animator animator;
 
     // Start is called before the first frame update
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-
     }
 
     private void FixedUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("Speed", Mathf.Abs(x));
         
 
         moveDelta = new Vector3(x, y, 0);
@@ -44,6 +41,7 @@ public class Player : MonoBehaviour
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
 
         }
+       
     }
 
 }
