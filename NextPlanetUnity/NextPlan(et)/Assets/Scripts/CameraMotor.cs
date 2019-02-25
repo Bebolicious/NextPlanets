@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMotor : MonoBehaviour
 {
-    private Transform lookAt;       // The object our camera will be following, defaulted on the player
+    public Transform lookAt;       // The object our camera will be following, defaulted on the player
     public float boundX = 0.15f;    // Amount of space we can walk in x before the camera follows
     public float boundY = 0.05f;    // Amount of space we can walk in y before the camera follows
 
