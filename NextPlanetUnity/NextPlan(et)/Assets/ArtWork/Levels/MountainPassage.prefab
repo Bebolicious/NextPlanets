@@ -304,8 +304,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 2, y: 3, z: 0}
     second:
-      m_TileIndex: 34
-      m_TileSpriteIndex: 34
+      m_TileIndex: 36
+      m_TileSpriteIndex: 28
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -314,7 +314,7 @@ Tilemap:
   - first: {x: 4, y: 3, z: 0}
     second:
       m_TileIndex: 27
-      m_TileSpriteIndex: 28
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -444,12 +444,12 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 27c47febd702e0f4fb12636c7a17c119, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: a1483bdb0eb1fdb43bbfb48a8ad4a671, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 2cbf26f650f0f2a46956f4e3af418172, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: eacda0ee4a4e2ef4090b3da59aa2a117, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: eacda0ee4a4e2ef4090b3da59aa2a117, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 2cbf26f650f0f2a46956f4e3af418172, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -508,7 +508,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 8f66357afa7c61b418a6a7b3cf57da86, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 2a5a6c645e3455c4ab89c44128316fa8, type: 3}
+    m_Data: {fileID: 21300000, guid: 08e0892a88f94ff4d9c7e2c16cdb9229, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: ce98e2dcb17e17f4e9c1cf25ee33a645, type: 3}
   - m_RefCount: 1
@@ -520,7 +520,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 51378ef535e98da4792cecb01bcc428d, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 08e0892a88f94ff4d9c7e2c16cdb9229, type: 3}
+    m_Data: {fileID: 21300000, guid: 2a5a6c645e3455c4ab89c44128316fa8, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 71e7d5c99cdec2343a900d285d8a68e1, type: 3}
   - m_RefCount: 1
