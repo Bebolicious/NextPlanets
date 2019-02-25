@@ -1,0 +1,10 @@
+<Quest>
+    <QuestTitle>Test</QuestTitle>
+    <Nodes>
+        <Node>
+            <NodeTitle>Sämsta questet</NodeTitle>
+            <NodeText>Du skall göra absolut ingenting</NodeText>
+            <NodeImage>MyImage</NodeImage>
+        </Node>
+    </Nodes>
+</Quest>
