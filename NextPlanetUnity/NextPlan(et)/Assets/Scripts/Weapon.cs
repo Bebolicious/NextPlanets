@@ -5,17 +5,14 @@ using UnityEngine;
 public class Weapon : Collidable
 {
     // Damage struct
-    public int[] damagePoint = { 1, 2, 3, 4, 5, 6, 7 };
-    public float[] pushForce = { 2.0f, 2.2f, 2.5f, 3.0f, 3.3f, 3.6f, 4.0f };
+    public int damagePoint = 1;
+    public float pushForce = 2.0f;
 
-    // Upgrade 
-    public int weaponLevel = 0;
-    public SpriteRenderer spriteRenderer;
 
-    // Swing
+    // Shoot
     private Animator anim;
     private float cooldown = 0.5f;
-    private float lastSwing;
+    private float lastShot;
 
     protected override void Start()
     {
@@ -26,14 +23,16 @@ public class Weapon : Collidable
     protected override void Update()
     {
         base.Update();
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (GameManager.instance.hasWeapon == true)
         {
-
-            if (Time.time - lastSwing > cooldown)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                lastSwing = Time.time;
-                Swing();
+
+                if (Time.time - lastShot > cooldown)
+                {
+                    lastShot = Time.time;
+                    Shoot();
+                }
             }
         }
     }
@@ -50,32 +49,19 @@ public class Weapon : Collidable
             // Create a new damage object, then we'll send it to the fighter we've hit
             Damage dmg = new Damage
             {
-                damageAmount = damagePoint[weaponLevel],
+                damageAmount = damagePoint,
                 origin = transform.position,
-                pushForce = pushForce[weaponLevel]
+                pushForce = pushForce
             };
 
             coll.SendMessage("ReceiveDamage", dmg);
 
         }
     }
-    private void Swing()
+    private void Shoot()
     {
-        anim.SetTrigger("Swing");
+        anim.SetTrigger("Shoot");
 
     }
 
-    public void UpgradeWeapon()
-    {
-        weaponLevel++;
-        spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
-
-        // Change stats %%
-    }
-
-    public void SetWeaponLevel(int level)
-    {
-        weaponLevel = level;
-        spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
-    }
 }
