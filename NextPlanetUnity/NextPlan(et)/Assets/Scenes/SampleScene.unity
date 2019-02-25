@@ -41550,6 +41550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0eb9ba9532be834db8be01779d30998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookAt: {fileID: 742435558}
   boundX: 0.15
   boundY: 0.05
 --- !u!20 &519420031
