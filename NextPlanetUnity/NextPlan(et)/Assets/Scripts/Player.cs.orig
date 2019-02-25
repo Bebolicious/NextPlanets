@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Player : Mover
 {
+<<<<<<< HEAD
+    private BoxCollider2D boxCollider;
+    protected Vector3 moveDelta;
+    private RaycastHit2D hit;
+=======
     public Animator animator;
     private bool isAlive = true;
 
+>>>>>>> d4d502247c875d0674a5e4577681196fd0024c23
 
     // Start is called before the first frame update
     protected override void Start()
@@ -19,8 +25,19 @@ public class Player : Mover
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+<<<<<<< HEAD
+        
+
+        moveDelta = new Vector3(x, y, 0);
+        if (moveDelta.x > 0)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else if (moveDelta.x < 0)
+=======
         animator.SetFloat("Speed", Mathf.Abs(x));
         if (isAlive)
+>>>>>>> d4d502247c875d0674a5e4577681196fd0024c23
         {
             UpdateMotor(new Vector3(x, y, 0));
         }
