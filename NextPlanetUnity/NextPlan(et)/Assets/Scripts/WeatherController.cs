@@ -14,7 +14,7 @@ public class WeatherController : MonoBehaviour
         public GameObject SnowSystem;
         public GameObject CloadSystem;
         public GameObject RainSystem;
-        public GameObject SunSystem;
+        public GameObject SunSystem; 
 
 
     public string CityId; // Kiruna 605155 Göteborg 2711537
@@ -22,6 +22,7 @@ public class WeatherController : MonoBehaviour
         void Start()
         {
         CheckSnowStatusAsync();
+        
         }
         void Update()
         {
