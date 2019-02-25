@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public int flowerPlants;
     public int experience;
     public int credits;
+    
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
