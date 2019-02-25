@@ -4,8 +4,7 @@ using System.IO;
 
 public class Quest
 {
-    [XmlArray("Nodes")]
-    [XmlArrayItem("Node")]
+    [XmlArray("Nodes")] [XmlArrayItem("Node")]
     public List<QuestNode> Nodes;
 
     [XmlAttribute("QuestTitle")]

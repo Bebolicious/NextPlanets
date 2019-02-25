@@ -1,0 +1,20 @@
+<Quest>
+    <QuestTitle>Jonathan's Quest</QuestTitle>
+    <Nodes>
+        <Node>
+            <NodeTitle>Jonathan</NodeTitle>
+            <NodeText>Hay, come here!</NodeText>
+            <NodeImage>Main_0.png</NodeImage>
+        </Node>
+        <Node>
+          <NodeTitle>Jonathan</NodeTitle>
+          <NodeText>Could you get the flux capacitor for me?</NodeText>
+          <NodeImage>Main_0.png</NodeImage>
+        </Node>
+        <Node>
+          <NodeTitle>Jonathan</NodeTitle>
+          <NodeText>I think Rikard has it in one of the escape pods.</NodeText>
+          <NodeImage>Main_0.png</NodeImage>
+        </Node>
+    </Nodes>
+</Quest>

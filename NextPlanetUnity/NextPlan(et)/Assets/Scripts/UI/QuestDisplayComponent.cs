@@ -32,7 +32,6 @@ public class QuestDisplayComponent : MonoBehaviour
             return;
         }
 
-        _nodeImage.sprite = _questManager.GetIcon(_currentNode.NodeImage);
 
         _nodeTitle.text = _currentNode.NodeTitle;
         _nodeText.text = _currentNode.NodeText;
