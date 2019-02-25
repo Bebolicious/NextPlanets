@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Mover
 {
-    private BoxCollider2D boxCollider;
-    protected Vector3 moveDelta;
-    private RaycastHit2D hit;
     public Animator animator;
+    private bool isAlive = true;
+
 
     // Start is called before the first frame update
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         boxCollider = GetComponent<BoxCollider2D>();
 
     }
@@ -21,29 +21,57 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Speed", Mathf.Abs(x));
-        
+        if (isAlive)
+        {
+            UpdateMotor(new Vector3(x, y, 0));
+        }
 
-        moveDelta = new Vector3(x, y, 0);
-        if (moveDelta.x > 0)
+    }
+
+    protected override void ReceiveDamage(Damage dmg)
+    {
+        if (!isAlive)
+            return;
+
+        base.ReceiveDamage(dmg);
+        GameManager.instance.OnHitpointChange();
+    }
+    protected override void Death()
+    {
+        GameManager.instance.deathMenuAnim.SetTrigger("Show");
+        isAlive = false;
+    }
+
+    public void OnLevelUp()
+    {
+        maxHitpoint++;
+        hitPoint = maxHitpoint;
+    }
+    public void SetLevel(int level)
+    {
+        for (int i = 0; i < level; i++)
         {
-            transform.localScale = Vector3.one;
+            OnLevelUp();
         }
-        else if (moveDelta.x < 0)
+    }
+    public void Heal(int healingAmount)
+    {
+        hitPoint += healingAmount;
+        if (hitPoint > maxHitpoint)
+            hitPoint = maxHitpoint;
+        else
         {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
-        if (hit.collider == null)
-        {
-            transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
+            GameManager.instance.ShowText("+" + healingAmount.ToString() + "hp", 25, Color.green, transform.position, Vector3.up * 30, 1.0f);
+            GameManager.instance.OnHitpointChange();
 
         }
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
-        if (hit.collider == null)
-        {
-            transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
-
-        }
+    }
+    public void Respawn()
+    {
+        Heal(maxHitpoint);
+        isAlive = true;
+        lastImmune = Time.time;
+        pushDirection = Vector3.zero;
     }
 
 }
