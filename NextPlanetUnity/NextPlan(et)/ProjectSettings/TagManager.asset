@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fighter
   layers:
   - Default
   - TransparentFX
@@ -61,6 +62,9 @@ TagManager:
     locked: 0
   - name: DesignThree
     uniqueID: 3871840269
+    locked: 0
+  - name: Actor
+    uniqueID: 878437057
     locked: 0
   - name: Player
     uniqueID: 2787968755
