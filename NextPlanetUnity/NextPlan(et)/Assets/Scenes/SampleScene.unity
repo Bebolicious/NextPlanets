@@ -55966,6 +55966,7 @@ GameObject:
   - component: {fileID: 1580708737}
   - component: {fileID: 1580708736}
   - component: {fileID: 1580708739}
+  - component: {fileID: 1580708740}
   m_Layer: 9
   m_Name: Alexander
   m_TagString: Untagged
@@ -56048,7 +56049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580708735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.103, y: 0.622, z: 0.44898975}
+  m_LocalPosition: {x: -1.084, y: 0.448, z: 0.44898975}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56080,6 +56081,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &1580708740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580708735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f14e49b3a6ffa4aa8d7871778015bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  message: I'm Alexander (The Great)
 --- !u!1 &1695450468
 GameObject:
   m_ObjectHideFlags: 0
@@ -56093,7 +56121,7 @@ GameObject:
   - component: {fileID: 1695450470}
   - component: {fileID: 1695450469}
   m_Layer: 0
-  m_Name: BeachPortal(test)
+  m_Name: BeachPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56209,7 +56237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695450468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.22, y: -0.35, z: 0.07302277}
+  m_LocalPosition: {x: 3.56, y: -0.43, z: 0.07302277}
   m_LocalScale: {x: 1, y: 2.55, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
