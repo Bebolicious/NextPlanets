@@ -1,0 +1,38 @@
+body, html{
+height: 100%;
+text-align: center;
+
+}
+
+p {
+
+  color: green;
+}
+
+
+footer {
+    background-color: #282928;
+    color: white;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+
+max-width:50%;
+height: auto;
+
+}
+
+.centerbar {
+  padding: 7%;
+  margin-right: 20%;
+  margin-top: 40px;
+    margin-left: 20%;
+background-color: white;
+text-align: center;
+
+
+}
