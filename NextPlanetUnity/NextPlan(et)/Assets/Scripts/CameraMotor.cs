@@ -10,8 +10,13 @@ public class CameraMotor : MonoBehaviour
 
     private void Start()
     {
-
-        lookAt = GameObject.Find("Player").transform;
+        if (GameObject.Find("Player"))
+        {
+            lookAt = GameObject.Find("Player").transform;
+        }
+        else
+            GameObject.Find("Menu");
+      
     }
 
     // LateUpdate, as we have to make sure the camera moves AFTER the player

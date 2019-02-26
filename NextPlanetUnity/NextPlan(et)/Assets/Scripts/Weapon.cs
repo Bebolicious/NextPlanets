@@ -60,6 +60,8 @@ public class Weapon : Collidable
     }
     private void Shoot()
     {
+        //bullet.position = player.position;
+        //bullet.velocity = (player.transform.forward).normalized * bulletSpeed;
         anim.SetTrigger("Shoot");
 
     }
