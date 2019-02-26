@@ -14,6 +14,7 @@ public class Shoot : MonoBehaviour
 
     private Vector3 lastPosition;
     private Vector2 movementDirection;
+    private Vector2 saveDir;
 
     void Start()
     {
@@ -23,6 +24,10 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         movementDirection = (GameManager.instance.player.transform.position - lastPosition).normalized;
+        if (movementDirection.magnitude >= 1)
+        {
+            saveDir = movementDirection;
+        }
         lastPosition = GameManager.instance.player.transform.position;
         if (GameManager.instance.hasWeapon == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -30,13 +35,8 @@ public class Shoot : MonoBehaviour
             Rigidbody2D instantiatedProjectile = Instantiate(projectile,
                 beamSpawn.position, beamSpawn.rotation) as Rigidbody2D;
 
-            instantiatedProjectile.AddForce(movementDirection * speed);
-            //instantiatedProjectile.AddForce(transform.right * speed);
-            //instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
-
+            instantiatedProjectile.AddForce(saveDir * speed);
         }
-
-
     }
 
     void OnCollide(Collider2D coll)
