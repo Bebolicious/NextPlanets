@@ -2,31 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireEx : MonoBehaviour
+public class FireExScripy : Collidable
 {
-    public GameObject FireExSystem;
     public GameObject FireOne;
     public GameObject FireTwo;
-
-
-    int x = 1;
-    int y = 2;
-
+    public GameObject Ex;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    protected override void OnCollide(Collider2D coll)
     {
-        if (x < y) // If player collides with fireEx
-        {           
-            FireExSystem.SetActive(true);
+        if (coll.name == "Player")
+        {
             FireOne.SetActive(false);
             FireTwo.SetActive(false);
+            Ex.SetActive(true);
         }
-
     }
+    
 }

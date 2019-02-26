@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fighter
+<<<<<<< HEAD
+  - Interactable
+=======
+  - Enemy
+>>>>>>> d59bc238d0c2dd2a6f93f84fb58a3b88bf5796be
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Blocking
+  - Actor
+  - Boat
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackGroundOne
+    uniqueID: 2937722643
+    locked: 0
+  - name: BackGroundTwo
+    uniqueID: 1429388449
+    locked: 0
+  - name: Particles
+    uniqueID: 373764981
+    locked: 0
+  - name: Ground
+    uniqueID: 2020988543
+    locked: 0
+  - name: Design
+    uniqueID: 3523100743
+    locked: 0
+  - name: DesignTwo
+    uniqueID: 169649075
+    locked: 0
+  - name: DesignThree
+    uniqueID: 3871840269
+    locked: 0
+  - name: Actor
+    uniqueID: 878437057
+    locked: 0
+  - name: Player
+    uniqueID: 2787968755
+    locked: 0
