@@ -2313,7 +2313,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   sceneNames:
-  - SampleScene
+  - SpaceShip
 --- !u!61 &742381527
 BoxCollider2D:
   m_ObjectHideFlags: 0

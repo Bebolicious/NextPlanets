@@ -21,6 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/EscapePodInside.unity
     guid: 05a4ff39be1faff4e9d7bf6508de0f6f
   - enabled: 1
+    path: Assets/Scenes/Planet.unity
+    guid: 47cd4cac8eb70c84b8ded336a4a7bd28
+  - enabled: 1
     path: Assets/Scenes/BeachLevel.unity
     guid: 8bf5450060c62884e8889e52290c2e78
+  - enabled: 1
+    path: Assets/Scenes/Island.unity
+    guid: ab5737ce4deb0a74d9e4476bc0172257
+  - enabled: 1
+    path: Assets/Scenes/MountainPassage.unity
+    guid: 252f0dc2fc1934440b79badd536baf18
+  - enabled: 1
+    path: Assets/Scenes/Basement.unity
+    guid: 3f8c1b498bccf1e4c833599078f50c26
   m_configObjects: {}

@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public int credits;
     public bool flowerQuest = false;
     public bool caveQuest = false;
-    public bool hasWeapon = false;
+    public bool hasWeapon = true;
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
