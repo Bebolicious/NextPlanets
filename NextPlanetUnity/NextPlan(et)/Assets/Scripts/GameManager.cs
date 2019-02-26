@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using kalle = System.Data.SqlClient;
+//using System.Data.SqlClient;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -126,16 +130,19 @@ public class GameManager : MonoBehaviour
      * INT fireFlowers
      * INT savedTulics
      * INT experience
+     * String SceneName
+      public bool flowerQuest = false;
+    public bool caveQuest = false;
+    public bool hasWeapon = false;
      */
     public void SaveState()
     {
         string s = "";
 
-        s += "0" + "|";
+        s += 0 + "|";
         s += credits.ToString() + "|";
-        s += fireFlowers.ToString() + "|";
-        s += savedTulics.ToString() + "|";
         s += experience.ToString() + "|";
+        s += weapon.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
 
@@ -149,7 +156,7 @@ public class GameManager : MonoBehaviour
 
         string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
-        //// Change player skin
+        // Change player skin
         //pesos = int.Parse(data[1]);
 
         //// Experience
@@ -157,7 +164,7 @@ public class GameManager : MonoBehaviour
         //if (GetCurrentLevel() != 1)
         //    player.SetLevel(GetCurrentLevel());
 
-        // Change the weapon level
+        //Change the weapon level
         //weapon.SetWeaponLevel(int.Parse(data[3]));
     }
 
