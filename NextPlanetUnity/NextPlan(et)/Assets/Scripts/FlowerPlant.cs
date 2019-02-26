@@ -12,8 +12,8 @@ public class FlowerPlant : Collectable
         {
             collected = true;
             GetComponent<SpriteRenderer>().sprite = EmptyFlower;
-            GameManager.instance.flowerPlants++;
-            GameManager.instance.ShowText("+1 FlowerPlant!", 25, Color.magenta, transform.position, Vector3.up * 25, 1.0f);
+            GameManager.instance.fireFlowers++;
+            GameManager.instance.ShowText("+1 Fire Flower!", 25, Color.magenta, transform.position, Vector3.up * 25, 1.0f);
 
         }
 

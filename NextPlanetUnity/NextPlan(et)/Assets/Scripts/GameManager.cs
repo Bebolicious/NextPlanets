@@ -38,30 +38,18 @@ public class GameManager : MonoBehaviour
     public GameObject menu;
 
     // Logic
-    public int flowerPlants;
+    public int fireFlowers;
+    public int savedTulics;
     public int experience;
     public int credits;
+    public bool flowerQuest = false;
+    public bool caveQuest = false;
+    public bool hasWeapon = false;
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
-    }
-    // Upgrade Weapon
-    public bool TryUpgradeWeapon()
-    {
-        // Is the weapon max level?
-        if (weaponPrices.Count <= weapon.weaponLevel)
-            return false;
-
-        if (credits >= weaponPrices[weapon.weaponLevel])
-        {
-            credits -= weaponPrices[weapon.weaponLevel];
-            weapon.UpgradeWeapon();
-            return true;
-        }
-
-        return false;
     }
 
     // Hitpoint Bar
@@ -135,9 +123,9 @@ public class GameManager : MonoBehaviour
     /*
      * INT preferedSkin 
      * INT credits
-     * INT flowerPlants
+     * INT fireFlowers
+     * INT savedTulics
      * INT experience
-     * INT weaponLevel
      */
     public void SaveState()
     {
@@ -145,9 +133,9 @@ public class GameManager : MonoBehaviour
 
         s += "0" + "|";
         s += credits.ToString() + "|";
-        s += flowerPlants.ToString() + "|";
+        s += fireFlowers.ToString() + "|";
+        s += savedTulics.ToString() + "|";
         s += experience.ToString() + "|";
-        s += weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
 
