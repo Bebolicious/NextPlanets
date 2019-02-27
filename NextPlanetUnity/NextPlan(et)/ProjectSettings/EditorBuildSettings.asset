@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EscapePodInside.unity
     guid: 05a4ff39be1faff4e9d7bf6508de0f6f
   - enabled: 1
+    path: Assets/Scenes/Planet.unity
+    guid: 47cd4cac8eb70c84b8ded336a4a7bd28
+  - enabled: 1
     path: Assets/Scenes/BeachLevel.unity
     guid: 8bf5450060c62884e8889e52290c2e78
   - enabled: 1

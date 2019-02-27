@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class Weapon : Collidable
 {
-    // Damage struct
+
     public int damagePoint = 1;
     public float pushForce = 2.0f;
 
-
-    // Shoot
-    private Animator anim;
     private float cooldown = 0.5f;
     private float lastShot;
 
     protected override void Start()
     {
         base.Start();
-        anim = GetComponent<Animator>();
     }
 
     protected override void Update()
@@ -27,11 +23,9 @@ public class Weapon : Collidable
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-
                 if (Time.time - lastShot > cooldown)
                 {
                     lastShot = Time.time;
-                    Shoot();
                 }
             }
         }
@@ -46,7 +40,6 @@ public class Weapon : Collidable
                 return;
             }
 
-            // Create a new damage object, then we'll send it to the fighter we've hit
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
@@ -57,13 +50,6 @@ public class Weapon : Collidable
             coll.SendMessage("ReceiveDamage", dmg);
 
         }
-    }
-    private void Shoot()
-    {
-        //bullet.position = player.position;
-        //bullet.velocity = (player.transform.forward).normalized * bulletSpeed;
-        anim.SetTrigger("Shoot");
-
     }
 
 }
