@@ -29,7 +29,7 @@ public class CaveTulic : Collidable
             GameManager.instance.caveQuest = true;
             GameManager.instance.savedTulics = 0;
         }
-        else
+        else if(Time.time - lastShout > cooldown && GameManager.instance.caveQuest == true)
         {
             lastShout = Time.time;
             GameManager.instance.ShowText(message[2], 25, Color.green, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);

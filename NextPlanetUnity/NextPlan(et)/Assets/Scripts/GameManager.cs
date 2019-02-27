@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         if (GameManager.instance != null)
         {
             Destroy(gameObject);
-            Destroy(player.gameObject);
+            //Destroy(player.gameObject);
             Destroy(floatingTextManager.gameObject);
             Destroy(hud);
             Destroy(menu);
@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     public bool caveQuest;
     public bool hasWeapon;
     public bool beachQuest;
+    public bool craterQuest;
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {

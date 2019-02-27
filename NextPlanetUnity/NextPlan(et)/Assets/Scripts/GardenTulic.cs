@@ -33,7 +33,7 @@ public class GardenTulic : Collidable
             GameManager.instance.fireFlowers -= 10;
             GameManager.instance.flowerQuest = true;
         }
-        else if(GameManager.instance.flowerQuest == true) 
+        else if(Time.time - lastShout > cooldown && GameManager.instance.flowerQuest == true) 
         {
             Debug.Log("Colliding 3");
 
