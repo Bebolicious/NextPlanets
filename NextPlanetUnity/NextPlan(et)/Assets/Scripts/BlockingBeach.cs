@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class BlockingBeach : MonoBehaviour
 {
-    public GameObject Blocking;
+    public GameObject BlockingBeachQuest;
+    public GameObject BlockingCraterQuest;
+    public GameObject BlockingLastScene;
+
 
     void Update()
     {
         if (GameManager.instance.beachQuest == true)
         {
-            Blocking.SetActive(true);
+            BlockingBeachQuest.SetActive(true);
         }
+
+        if (GameManager.instance.craterQuest == true)
+        {
+            BlockingCraterQuest.SetActive(true);
+
+        }
+
+        if (GameManager.instance.flowerQuest == false)
+        {
+            BlockingLastScene.SetActive(true);
+        }
+
     }
 }
