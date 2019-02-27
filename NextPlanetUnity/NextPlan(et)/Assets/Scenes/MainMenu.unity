@@ -179,6 +179,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3022668548762550776, guid: 55b8e87d78dac724bacc8169c8358874,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.003581047
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022668548762550776, guid: 55b8e87d78dac724bacc8169c8358874,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.18386555
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022668548762550776, guid: 55b8e87d78dac724bacc8169c8358874,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.002341628
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022668548762550776, guid: 55b8e87d78dac724bacc8169c8358874,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.3052035
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55b8e87d78dac724bacc8169c8358874, type: 3}
 --- !u!1 &397116836
@@ -1511,7 +1531,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 1.92705
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

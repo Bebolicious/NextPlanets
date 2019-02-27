@@ -6,7 +6,7 @@ public class GardenTulic : Collidable
 {
     public string[] message;
     private float cooldown = 4.0f;
-    private float lastShout = -4.0f;
+    private float lastShout;
 
     protected override void Start()
     {
