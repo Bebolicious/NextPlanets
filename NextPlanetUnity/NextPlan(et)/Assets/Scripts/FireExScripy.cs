@@ -7,6 +7,7 @@ public class FireExScripy : Collidable
     public GameObject FireOne;
     public GameObject FireTwo;
     public GameObject Ex;
+    public GameObject Boat;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -17,6 +18,7 @@ public class FireExScripy : Collidable
             FireOne.SetActive(false);
             FireTwo.SetActive(false);
             Ex.SetActive(true);
+            Boat.SetActive(true);
             GameManager.instance.beachQuest = true;
         }
     }
