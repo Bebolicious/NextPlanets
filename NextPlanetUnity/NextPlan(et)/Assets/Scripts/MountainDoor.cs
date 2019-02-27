@@ -18,21 +18,21 @@ public class MountainDoor : Collidable
     {
         if (coll.name == "Player")
         {
-        if (Time.time - lastShout > cooldown && GameManager.instance.flowerQuest == false)
-        {
-            Debug.Log("Door1");
-            lastShout = Time.time;
-            GameManager.instance.ShowText(message[0], 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
-        }
-        else if (Time.time - lastShout > cooldown && GameManager.instance.flowerQuest == true)
-        {
-            Debug.Log("Door2");
-            lastShout = Time.time;
-            GameManager.instance.ShowText(message[1], 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Basement");
-        }
+            if (Time.time - lastShout > cooldown && GameManager.instance.flowerQuest == false)
+            {
+                Debug.Log("Door1");
+                lastShout = Time.time;
+                GameManager.instance.ShowText(message[0], 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
+            }
+            else if (Time.time - lastShout > cooldown && GameManager.instance.flowerQuest == true)
+            {
+                Debug.Log("Door2");
+                lastShout = Time.time;
+                GameManager.instance.ShowText(message[1], 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Basement");
+            }
 
         }
-        
+
     }
 }
