@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadState;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
+    
 
     // Resources
     public List<Sprite> playerSprites;
