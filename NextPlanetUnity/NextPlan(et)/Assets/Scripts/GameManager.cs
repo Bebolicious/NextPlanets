@@ -1,17 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//using kalle = System.Data.SqlClient;
-//using System.Data.SqlClient;
+
 
 
 public class GameManager : MonoBehaviour
 {
+
     public static GameManager instance;
     private void Awake()
-    {
+    {       
         if (GameManager.instance != null)
         {
             Destroy(gameObject);
@@ -36,19 +37,23 @@ public class GameManager : MonoBehaviour
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitPointBar;
+
+
+
     public Animator deathMenuAnim;
     public GameObject hud;
     public GameObject menu;
 
     // Logic
+    public string ScenName;
     public int fireFlowers;
     public int savedTulics;
     public int experience;
     public int credits;
-    public bool flowerQuest = false;
-    public bool caveQuest = false;
-    public bool hasWeapon = false;
-
+    public bool flowerQuest;
+    public bool caveQuest;
+    public bool hasWeapon;
+    public bool beachQuest;
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
@@ -109,8 +114,8 @@ public class GameManager : MonoBehaviour
 
     // On Scene Loaded
     public void OnSceneLoaded(Scene s, LoadSceneMode mode)
-    {
-        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    {        
+            player.transform.position = GameObject.Find("SpawnPoint").transform.position;       
     }
 
     // Death Menu and Respawn
@@ -122,49 +127,26 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // Save state
-    /*
-     * INT preferedSkin 
-     * INT credits
-     * INT fireFlowers
-     * INT savedTulics
-     * INT experience
-     * String SceneName
-      public bool flowerQuest = false;
-    public bool caveQuest = false;
-    public bool hasWeapon = false;
-     */
+    // Save state   
+    // * INT credits
+    // * INT fireFlowers
+    // * INT savedTulics
+    // * INT experience
+    // * String SceneName
+    //  public bool flowerQuest = false;
+    //public bool caveQuest = false;
+    //public bool hasWeapon = false;
+    //public bool beachQuest = false;
+
+     
     public void SaveState()
     {
-        string s = "";
-
-        s += 0 + "|";
-        s += credits.ToString() + "|";
-        s += experience.ToString() + "|";
-        s += weapon.ToString();
-
-        PlayerPrefs.SetString("SaveState", s);
-
+        // Kanske måste använda dessa mellan varje scen
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
-        SceneManager.sceneLoaded -= LoadState;
+        // Kanske måste använda dessa mellan varje scen
 
-        if (!PlayerPrefs.HasKey("SaveState"))
-            return;
-
-        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
-
-        // Change player skin
-        //pesos = int.Parse(data[1]);
-
-        //// Experience
-        //experience = int.Parse(data[2]);
-        //if (GetCurrentLevel() != 1)
-        //    player.SetLevel(GetCurrentLevel());
-
-        //Change the weapon level
-        //weapon.SetWeaponLevel(int.Parse(data[3]));
     }
 
 }

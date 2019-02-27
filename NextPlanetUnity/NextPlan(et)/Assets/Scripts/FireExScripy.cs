@@ -12,11 +12,12 @@ public class FireExScripy : Collidable
     // Update is called once per frame
     protected override void OnCollide(Collider2D coll)
     {
-        if (coll.name == "Player")
+        if (coll.name == "Player" && GameManager.instance.beachQuest == false)
         {
             FireOne.SetActive(false);
             FireTwo.SetActive(false);
             Ex.SetActive(true);
+            GameManager.instance.beachQuest = true;
         }
     }
   
