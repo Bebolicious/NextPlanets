@@ -25,7 +25,7 @@ public class LoadSlotX : MonoBehaviour
                 {
                     RawData = reader.GetSqlString(1).ToString();
                 }
-                    
+
             }
             string[] data = RawData.Split('|');
             GameManager.instance.credits = int.Parse(data[0]);
@@ -59,7 +59,7 @@ public class LoadSlotX : MonoBehaviour
             }
             isDataBaseChecked = true;
             SceneManager.LoadScene(data[4]);
-        } 
-        
-    }    
+        }
+
+    }
 }
