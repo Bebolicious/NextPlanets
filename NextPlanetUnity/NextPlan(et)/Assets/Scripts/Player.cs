@@ -20,6 +20,7 @@ public class Player : Mover
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Speed", Mathf.Abs(x));
+        animator.SetFloat("Speed2", Mathf.Abs(y));
         if (isAlive)
         {
             UpdateMotor(new Vector3(x, y, 0));
