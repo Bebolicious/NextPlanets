@@ -20,7 +20,7 @@ public class CaveTulic : Collidable
         {
             GameManager.instance.hasWeapon = true;
             lastShout = Time.time;
-            GameManager.instance.ShowText(message[0], 25, Color.blue, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
+            GameManager.instance.ShowText(message[0], 25, Color.red, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
         }
         else if (Time.time - lastShout > cooldown && GameManager.instance.caveQuest == false && GameManager.instance.savedTulics >= 5)
         {
