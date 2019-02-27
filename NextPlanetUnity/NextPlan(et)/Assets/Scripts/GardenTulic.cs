@@ -16,13 +16,18 @@ public class GardenTulic : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
+        Debug.Log("Colliding");
         if (Time.time - lastShout > cooldown && GameManager.instance.flowerQuest == false && GameManager.instance.fireFlowers < 10)
         {
+            Debug.Log("Colliding 1");
+
             lastShout = Time.time;
             GameManager.instance.ShowText(message[0], 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
         }
         else if(Time.time - lastShout > cooldown && GameManager.instance.flowerQuest == false && GameManager.instance.fireFlowers >= 10)
         {
+            Debug.Log("Colliding 2");
+
             lastShout = Time.time;
             GameManager.instance.ShowText(message[1], 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
             GameManager.instance.fireFlowers -= 10;
@@ -30,6 +35,8 @@ public class GardenTulic : Collidable
         }
         else if(GameManager.instance.flowerQuest == true) 
         {
+            Debug.Log("Colliding 3");
+
             lastShout = Time.time;
             GameManager.instance.ShowText(message[2], 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
         }
