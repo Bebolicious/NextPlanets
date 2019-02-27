@@ -10,6 +10,8 @@ public class Shoot : MonoBehaviour
     public float speed = 200;
     public int damagePoint = 1;
     public float pushForce = 2.0f;
+    private float cooldown = 0.5f;
+    private float lastShot;
 
 
     private Vector3 lastPosition;
@@ -31,32 +33,16 @@ public class Shoot : MonoBehaviour
         lastPosition = GameManager.instance.player.transform.position;
         if (GameManager.instance.hasWeapon == true && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Shooting");
-            Rigidbody2D instantiatedProjectile = Instantiate(projectile,
-                beamSpawn.position, beamSpawn.rotation) as Rigidbody2D;
-
-            instantiatedProjectile.AddForce(saveDir * speed);
-        }
-    }
-
-    void OnCollide(Collider2D coll)
-    {
-        if (coll.tag == "Fighter")
-        {
-            if (coll.name == "Player")
+            if (Time.time - lastShot > cooldown)
             {
-                return;
+                lastShot = Time.time;
+                Rigidbody2D instantiatedProjectile = Instantiate(projectile,
+                    beamSpawn.position, beamSpawn.rotation) as Rigidbody2D;
+
+                instantiatedProjectile.AddForce(saveDir * speed);
+                Debug.Log(saveDir.ToString());
             }
-
-            Damage dmg = new Damage
-            {
-                damageAmount = damagePoint,
-                origin = transform.position,
-                pushForce = pushForce
-            };
-
-            coll.SendMessage("ReceiveDamage", dmg);
-
         }
     }
+
 }

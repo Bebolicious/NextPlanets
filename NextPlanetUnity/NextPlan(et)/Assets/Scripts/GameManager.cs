@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     private void Awake()
-    {       
+    {
         if (GameManager.instance != null)
         {
             Destroy(gameObject);
@@ -25,8 +25,10 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+
     }
-    
+
 
     // Resources
     public List<Sprite> playerSprites;
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitPointBar;
+    public CanvasGroup canvasGroup;
 
 
 
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     // Logic
     public string ScenName;
+    private string currentScene;
     public int fireFlowers;
     public int savedTulics;
     public int experience;
@@ -116,15 +120,16 @@ public class GameManager : MonoBehaviour
 
     // On Scene Loaded
     public void OnSceneLoaded(Scene s, LoadSceneMode mode)
-    {        
-            player.transform.position = GameObject.Find("SpawnPoint").transform.position;       
+    {
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+        currentScene = s.name.ToString();
     }
 
     // Death Menu and Respawn
     public void Respawn()
     {
         deathMenuAnim.SetTrigger("Hide");
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(currentScene);
         player.Respawn();
     }
 
@@ -140,13 +145,21 @@ public class GameManager : MonoBehaviour
     //public bool hasWeapon = false;
     //public bool beachQuest = false;
 
-     
+
     public void SaveState()
     {
         // Kanske måste använda dessa mellan varje scen
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+        if (s.name.ToString() == "MainMenu" || s.name.ToString() == "LoadSave")
+        {
+            canvasGroup.alpha = 0f;
+        }
+        else if (s.name.ToString() != "MainMenu" || s.name.ToString() != "LoadSave")
+        {
+            canvasGroup.alpha = 1f;
+        }
         // Kanske måste använda dessa mellan varje scen
 
     }
