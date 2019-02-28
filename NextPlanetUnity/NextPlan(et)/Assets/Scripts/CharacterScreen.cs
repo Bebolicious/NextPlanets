@@ -62,6 +62,7 @@ public class CharacterScreen : MonoBehaviour
     {
         characterSelectionSprite.sprite = GameManager.instance.playerSprites[currentCharacterSelection];
         //GameManager.instance.player.SwapSprite(currentCharacterSelection);
+       
     }
 
     public void UpdateCharacterScreen()
