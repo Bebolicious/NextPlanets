@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     public GameObject menu;
 
     // Logic
+    public bool isInRange;
     public string ScenName;
     private string currentScene;
     public int fireFlowers;

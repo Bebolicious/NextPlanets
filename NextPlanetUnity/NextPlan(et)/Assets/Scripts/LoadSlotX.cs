@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadSlotX : MonoBehaviour
 {
+    
     bool isDataBaseChecked;
     string RawData = "";
     private const string conString = "Server=tcp:academyunity.database.windows.net,1433;Initial Catalog=mysqlserver;Persist Security Info=False;User ID=AcademyAdmin;Password=pOWERkING!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";

@@ -64205,7 +64205,7 @@ GameObject:
   - component: {fileID: 1663263727}
   - component: {fileID: 1663263726}
   - component: {fileID: 1663263725}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BasementDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64970,6 +64970,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4837310298211431880, guid: fc6a70831e3af1943b1acf5cdc6ddd9e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6333026733946906840, guid: fc6a70831e3af1943b1acf5cdc6ddd9e,
         type: 3}
       propertyPath: m_Name
@@ -65029,11 +65034,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837310298211431880, guid: fc6a70831e3af1943b1acf5cdc6ddd9e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6a70831e3af1943b1acf5cdc6ddd9e, type: 3}
