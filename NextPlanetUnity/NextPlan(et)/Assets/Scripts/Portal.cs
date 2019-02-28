@@ -13,6 +13,8 @@ public class Portal : Collidable
     {
         if (coll.name == "Player")
         {
+            Debug.Log(GameManager.instance.beachQuest);
+            int saveSlot = GameManager.instance.SaveSlot;
             string s = "";
             string sceneName = sceneNames[0];            
             s += GameManager.instance.credits.ToString() + "|";
@@ -24,7 +26,7 @@ public class Portal : Collidable
             {
                 s += 0.ToString() + "|";
             }
-            else
+            if (GameManager.instance.flowerQuest == true)
             {
                 s += 1.ToString() + "|";
             }
@@ -32,19 +34,36 @@ public class Portal : Collidable
             {
                 s += 0.ToString() + "|";
             }
-            else
+            if (GameManager.instance.caveQuest == true)
             {
                 s += 1.ToString() + "|";
             }
             if (GameManager.instance.hasWeapon == false)
             {
-                s += 0.ToString();
+                s += 0.ToString() + "|";
             }
-            else
+            if (GameManager.instance.hasWeapon == true)
             {
-                s += 1.ToString();
+                s += 1.ToString() + "|";
             }
-            var sql = "UPDATE SaveData SET RawData = @s where id = 1";
+            if (GameManager.instance.beachQuest == false)
+            {
+                s += 0.ToString() + "|";
+            }
+            if (GameManager.instance.beachQuest == true)
+            {
+                s += 1.ToString() + "|";
+            }
+            if (GameManager.instance.craterQuest == false)
+            {
+                s += 0.ToString() + "|";
+            }
+            if (GameManager.instance.craterQuest == true)
+            {
+                s += 1.ToString() + "|";
+            }
+            s += GameManager.instance.SaveSlot.ToString();
+            var sql = "UPDATE SaveData SET RawData = @s where id = " + saveSlot;
             using (SqlConnection connection = new SqlConnection(conString))
             using (SqlCommand command = new SqlCommand(sql, connection))
             {

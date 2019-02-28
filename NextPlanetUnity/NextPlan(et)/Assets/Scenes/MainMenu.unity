@@ -9520,6 +9520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3022668548762550780, guid: 55b8e87d78dac724bacc8169c8358874,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3022668548762550777, guid: 55b8e87d78dac724bacc8169c8358874,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9616,6 +9621,11 @@ PrefabInstance:
       propertyPath: beamSpawn
       value: 
       objectReference: {fileID: 809223579}
+    - target: {fileID: 3022668548047702840, guid: 55b8e87d78dac724bacc8169c8358874,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55b8e87d78dac724bacc8169c8358874, type: 3}
 --- !u!1 &128637917
@@ -23976,6 +23986,7 @@ GameObject:
   - component: {fileID: 519829309}
   - component: {fileID: 519829308}
   - component: {fileID: 519829307}
+  - component: {fileID: 519829310}
   m_Layer: 5
   m_Name: ViewControls
   m_TagString: Untagged
@@ -24042,7 +24053,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 519829308}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519829310}
+        m_MethodName: LoadMainMenu
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Controllers
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &519829308
@@ -24082,6 +24104,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519829305}
   m_CullTransparentMesh: 0
+--- !u!114 &519829310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519829305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f0defaead1e524bb5a677ca60a3ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563153045
 GameObject:
   m_ObjectHideFlags: 0
@@ -100402,6 +100436,7 @@ MonoBehaviour:
   deathMenuAnim: {fileID: 1119105014}
   hud: {fileID: 1119105013}
   menu: {fileID: 0}
+  isInRange: 0
   ScenName: 
   fireFlowers: 0
   savedTulics: 0

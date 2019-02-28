@@ -55615,7 +55615,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   message:
   - Oh thank spacegod you're here! My spaceship on the island is on fire, please help
-    me extinguish tthe fire!
+    me extinguish the fire!
   - Wow, you're my hero! Please accept this golden key!
 --- !u!61 &1717868417
 BoxCollider2D:
