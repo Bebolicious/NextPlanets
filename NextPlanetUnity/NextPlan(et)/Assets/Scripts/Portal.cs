@@ -13,7 +13,6 @@ public class Portal : Collidable
     {
         if (coll.name == "Player")
         {
-            Debug.Log(GameManager.instance.beachQuest);
             int saveSlot = GameManager.instance.SaveSlot;
             string s = "";
             string sceneName = sceneNames[0];            
