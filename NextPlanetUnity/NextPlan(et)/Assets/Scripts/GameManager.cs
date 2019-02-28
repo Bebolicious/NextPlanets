@@ -148,19 +148,18 @@ public class GameManager : MonoBehaviour
 
     public void SaveState()
     {
-        // Kanske måste använda dessa mellan varje scen
+
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
-        if (s.name.ToString() == "MainMenu" || s.name.ToString() == "LoadSave")
+        if (s.name.ToString() == "MainMenu" || s.name.ToString() == "LoadSave" || s.name.ToString() == "Controllers")
         {
             canvasGroup.alpha = 0f;
         }
-        else if (s.name.ToString() != "MainMenu" || s.name.ToString() != "LoadSave")
+        else if (s.name.ToString() != "MainMenu" || s.name.ToString() != "LoadSave" || s.name.ToString() != "Controllers")
         {
             canvasGroup.alpha = 1f;
         }
-        // Kanske måste använda dessa mellan varje scen
 
     }
 
