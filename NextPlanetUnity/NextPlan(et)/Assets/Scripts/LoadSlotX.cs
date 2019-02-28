@@ -14,6 +14,24 @@ public class LoadSlotX : MonoBehaviour
 
     public void getDataBaseInput(int id)
     {
+        if (id == 0 && isDataBaseChecked == false)
+        {
+            GameManager.instance.credits = 0;
+            GameManager.instance.fireFlowers = 0;
+            GameManager.instance.savedTulics = 0;
+            GameManager.instance.experience = 0;
+            GameManager.instance.ScenName = "SpaceShip";
+            GameManager.instance.flowerQuest = false;
+            GameManager.instance.caveQuest = false;
+            GameManager.instance.hasWeapon = false;
+            GameManager.instance.beachQuest = false;
+            GameManager.instance.craterQuest = false;
+            GameManager.instance.SaveSlot = id;
+            isDataBaseChecked = true;
+            SceneManager.LoadScene("SpaceShip");
+
+
+        }
         if (isDataBaseChecked == false)
         {
             var sql = @"select * from SaveData where id = " + id.ToString();
@@ -58,6 +76,23 @@ public class LoadSlotX : MonoBehaviour
             {
                 GameManager.instance.hasWeapon = true;
             }
+            if (int.Parse(data[8]) == 0)
+            {
+                GameManager.instance.beachQuest = false;
+            }
+            else
+            {
+                GameManager.instance.beachQuest = true;
+            }
+            if (int.Parse(data[9]) == 0)
+            {
+                GameManager.instance.craterQuest = false;
+            }
+            else
+            {
+                GameManager.instance.craterQuest = true;
+            }
+            GameManager.instance.SaveSlot = int.Parse(data[10]);
             isDataBaseChecked = true;
             SceneManager.LoadScene(data[4]);
         }
