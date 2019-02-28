@@ -8,7 +8,6 @@ TagManager:
   - Enemy
   - HUD
   - Beam
-  - Interactable
   layers:
   - Default
   - TransparentFX
