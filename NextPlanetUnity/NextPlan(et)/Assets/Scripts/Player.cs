@@ -75,4 +75,9 @@ public class Player : Mover
         pushDirection = Vector3.zero;
     }
 
+    //public void SwapSprite(int skinId)
+    //{
+    //    spriteRenderer.sprite = GameManager.instance.playerSprites[skinId];
+    //}
+
 }
