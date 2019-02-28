@@ -115537,7 +115537,7 @@ GameObject:
   - component: {fileID: 2121061089}
   - component: {fileID: 2121061088}
   - component: {fileID: 2121061087}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MountainDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

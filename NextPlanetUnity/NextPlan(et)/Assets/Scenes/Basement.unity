@@ -64205,7 +64205,7 @@ GameObject:
   - component: {fileID: 1663263727}
   - component: {fileID: 1663263726}
   - component: {fileID: 1663263725}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BasementDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

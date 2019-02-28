@@ -22,5 +22,6 @@ public class FireExScripy : Collidable
             GameManager.instance.beachQuest = true;
         }
     }
-  
+    
+
 }
