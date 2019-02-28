@@ -32,6 +32,7 @@ public class Beam : Collidable
             collision.collider.SendMessage("ReceiveDamage", dmg);
             Destroy(gameObject);
         }
+        
     }
 
     //protected override void OnCollide(Collider2D coll)
