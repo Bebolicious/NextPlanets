@@ -14,6 +14,7 @@ public class Enemy : Mover
     private bool collidingWithPlayer;
     private Transform playerTransform;
     private Vector3 startingPosition;
+    public Animator animator2;
 
     // Hitbox
     public ContactFilter2D filter;
@@ -30,11 +31,20 @@ public class Enemy : Mover
 
     private void FixedUpdate()
     {
+
+        
+    
+
+    
+        
+
         // Is the player in range?
         if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
             if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
                 chasing = true;
+            float hSpeed = 0.75f;
+            animator2.SetFloat("SpeedH", Mathf.Abs(hSpeed));
 
             if (chasing)
             {
@@ -52,6 +62,9 @@ public class Enemy : Mover
         {
             UpdateMotor(startingPosition - transform.position);
             chasing = false;
+            float hSpeed = 0f;
+            animator2.SetFloat("SpeedH", Mathf.Abs(hSpeed));
+
         }
 
         // Check for overlaps
