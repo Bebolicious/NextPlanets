@@ -4966,7 +4966,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10 / 50
+  m_Text: 
 --- !u!222 &51325041
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19902,7 +19902,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0 / 20
+  m_Text: 
 --- !u!222 &407000545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -83417,7 +83417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 
 --- !u!222 &1720463817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -102352,11 +102352,12 @@ MonoBehaviour:
   deathMenuAnim: {fileID: 1119105014}
   hud: {fileID: 1119105013}
   menu: {fileID: 320484441}
+  SaveSlot: 0
   ScenName: 
   fireFlowers: 0
   savedTulics: 0
   experience: 0
-  credits: 0
+  credits: 10
   hasWeapon: 0
   beachQuest: 0
   craterQuest: 0
@@ -102701,7 +102702,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &1941644324
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -122048,6 +122049,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5141340703442747571, guid: e3b4b372e7634034a80bb18f46dd7b5d,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5141340702573143327, guid: e3b4b372e7634034a80bb18f46dd7b5d,
         type: 3}
       propertyPath: m_Name
@@ -122163,12 +122169,27 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5141340704144603752, guid: e3b4b372e7634034a80bb18f46dd7b5d,
+    - target: {fileID: 5141340703514108962, guid: e3b4b372e7634034a80bb18f46dd7b5d,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141340704403621267, guid: e3b4b372e7634034a80bb18f46dd7b5d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnArrowClick
       objectReference: {fileID: 0}
-    - target: {fileID: 5141340704403621267, guid: e3b4b372e7634034a80bb18f46dd7b5d,
+    - target: {fileID: 5141340702595929668, guid: e3b4b372e7634034a80bb18f46dd7b5d,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141340703671339531, guid: e3b4b372e7634034a80bb18f46dd7b5d,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141340704144603752, guid: e3b4b372e7634034a80bb18f46dd7b5d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnArrowClick

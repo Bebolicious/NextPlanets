@@ -32,12 +32,10 @@ public class GameManager : MonoBehaviour
 
     // Resources
     public List<Sprite> playerSprites;
-    public Sprite weaponSprite;
     public List<int> xpTable;
 
     // References
     public Player player;
-    public Weapon weapon;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitPointBar;
     public CanvasGroup canvasGroup;
