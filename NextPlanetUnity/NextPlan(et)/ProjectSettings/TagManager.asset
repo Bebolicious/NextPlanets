@@ -8,7 +8,10 @@ TagManager:
   - Enemy
   - HUD
   - Beam
+<<<<<<< HEAD
+=======
   - Interactable
+>>>>>>> 548f9af40cdce46d7475b936f0842e2f3e76e9e7
   layers:
   - Default
   - TransparentFX

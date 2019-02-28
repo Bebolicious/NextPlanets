@@ -59641,7 +59641,7 @@ GameObject:
   - component: {fileID: 1090182770}
   - component: {fileID: 1090182772}
   - component: {fileID: 1090182773}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: CaveTulic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
