@@ -3,12 +3,38 @@ using UnityEngine.UI;
 
 public class CharacterScreen : MonoBehaviour
 {
-    public Text levelText, hitPointText, creditsText, xpText, 
+    public Text levelText, hitPointText, creditsText, xpText,
         beachQuestText, craterQuestText, flowerQuestText, caveQuestText, bossQuestText;
 
     private int currentCharacterSelection = 0;
     public Image characterSelectionSprite;
     public RectTransform xpBar;
+    Animator menuAnimation;
+    public bool menuShowing = false;
+
+    void Start()
+    {
+        menuAnimation = gameObject.GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (menuShowing == false)
+            {
+                UpdateCharacterScreen();
+                menuAnimation.SetTrigger("Show");
+                menuShowing = true;
+            }
+            else
+            {
+                menuAnimation.SetTrigger("Hide");
+                menuShowing = false;
+            }
+
+        }
+    }
 
     // Character Selection
     public void OnArrowClick(bool right)
@@ -38,7 +64,7 @@ public class CharacterScreen : MonoBehaviour
         //GameManager.instance.player.SwapSprite(currentCharacterSelection);
     }
 
-public void UpdateCharacterScreen()
+    public void UpdateCharacterScreen()
     {
         levelText.text = GameManager.instance.GetCurrentLevel().ToString();
         hitPointText.text = GameManager.instance.player.hitPoint.ToString();
@@ -83,7 +109,7 @@ public void UpdateCharacterScreen()
             xpBar.localScale = new Vector3(completionRatio, 1, 1);
             xpText.text = currentXpIntoLevel.ToString() + " / " + difference;
         }
-        
+
 
     }
 }
