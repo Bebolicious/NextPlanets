@@ -102342,7 +102342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSprites:
   - {fileID: 21300000, guid: def417bcedda12e45956742ff45d87ff, type: 3}
-  - {fileID: 21300000, guid: 12d2ba0d84fc20548afd4c6b10fd3195, type: 3}
+  - {fileID: 21300000, guid: 33fc25d4057b54546a1b863c2d6c4821, type: 3}
   xpTable: 050000000a0000001400000023000000
   player: {fileID: 2078897744}
   floatingTextManager: {fileID: 1717752859}

@@ -6,11 +6,12 @@ public class Player : Mover
 {
     public Animator animator;
     private bool isAlive = true;
-
+    
 
     // Start is called before the first frame update
     protected override void Start()
     {
+       
         base.Start();
         boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -74,6 +75,8 @@ public class Player : Mover
         lastImmune = Time.time;
         pushDirection = Vector3.zero;
     }
+
+   
 
     //public void SwapSprite(int skinId)
     //{
