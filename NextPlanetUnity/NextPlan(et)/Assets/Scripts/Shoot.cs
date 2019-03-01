@@ -18,6 +18,9 @@ public class Shoot : MonoBehaviour
     private Vector2 movementDirection;
     private Vector2 saveDir;
 
+    public AudioSource fireSource;
+    public AudioClip fireShot;
+
     void Start()
     {
         lastPosition = GameManager.instance.player.transform.position;
@@ -33,6 +36,7 @@ public class Shoot : MonoBehaviour
         lastPosition = GameManager.instance.player.transform.position;
         if (GameManager.instance.hasWeapon == true && Input.GetKeyDown(KeyCode.Space))
         {
+            fireSource.PlayOneShot(fireShot);
             if (Time.time - lastShot > cooldown)
             {
                 lastShot = Time.time;
