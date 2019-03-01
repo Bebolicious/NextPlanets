@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public GameObject menu;
 
     // Logic
+    
     public int SaveSlot;
     public string ScenName;
     private string currentScene;
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
     public bool flowerQuest;
     public bool caveQuest;
     public bool bossQuest;
+    public bool lastQuest;
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
