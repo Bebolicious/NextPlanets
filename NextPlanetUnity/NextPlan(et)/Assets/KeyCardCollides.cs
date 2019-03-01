@@ -14,7 +14,7 @@ public class KeyCardCollides : Collidable
         if (coll.name == "Player")
         {
             KeyCard.SetActive(false);            
-            GameManager.instance.lastQuest = true;
+            GameManager.instance.hasKeyCard = true;
         }
     }
 }
