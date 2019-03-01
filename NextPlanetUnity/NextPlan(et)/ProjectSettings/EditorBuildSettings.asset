@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controllers.unity
     guid: 73ddd69805e26b541abe7695db49356b
+  - enabled: 1
+    path: Assets/Scenes/ThanksForPlaying.unity
+    guid: beac463f2eee92647a8afcbb53e1b2e1
   m_configObjects: {}
