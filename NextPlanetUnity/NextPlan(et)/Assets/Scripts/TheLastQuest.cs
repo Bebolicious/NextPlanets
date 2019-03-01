@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TheLastQuest : Collidable
 {
@@ -26,7 +28,15 @@ public class TheLastQuest : Collidable
         {
             lastShout = Time.time;
             GameManager.instance.ShowText(message[1], 25, Color.white, transform.position + new Vector3(0, 0.32f, 0), Vector3.zero, cooldown);
-        }
+            LoadLastScen();
 
+
+        }
+       
+        void LoadLastScen()
+        {
+            Thread.Sleep(2000);
+            SceneManager.LoadScene("ThanksForPlaying");
+        }
     }
 }
