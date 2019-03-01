@@ -25,6 +25,11 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.hasAutoLaser == true)
+        {
+            cooldown = 0.0f;
+        }
+
         movementDirection = (GameManager.instance.player.transform.position - lastPosition).normalized;
         if (movementDirection.magnitude >= 1)
         {

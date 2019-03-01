@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     public int experience;
     public int credits;
     public bool hasWeapon;
+    public bool hasAutoLaser;
     public bool beachQuest;
     public bool craterQuest;
     public bool flowerQuest;

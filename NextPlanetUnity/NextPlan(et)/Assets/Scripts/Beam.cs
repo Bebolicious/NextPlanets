@@ -19,7 +19,7 @@ public class Beam : Collidable
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Fighter")
+        if (collision.collider.tag == "Fighter" || collision.collider.tag == "Boss")
         {
 
             Damage dmg = new Damage
