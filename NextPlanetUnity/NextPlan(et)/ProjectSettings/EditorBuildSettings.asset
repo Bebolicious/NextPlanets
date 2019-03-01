@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Crater.unity
     guid: 987519b0e73bf7c4e83bbf6ed9c285aa
   - enabled: 1
+    path: Assets/Scenes/BossRoom.unity
+    guid: 3f903da1027410647b22bb59b4af49d5
+  - enabled: 1
     path: Assets/Scenes/Controllers.unity
     guid: 73ddd69805e26b541abe7695db49356b
   - enabled: 1

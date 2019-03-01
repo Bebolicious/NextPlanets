@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Beam : Collidable
+public class BossBeam : Collidable
 {
-    private float beamLifeTime = 2.0f;
+    private float beamLifeTime = 3.0f;
 
     protected override void Update()
     {
@@ -19,20 +19,20 @@ public class Beam : Collidable
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Fighter" || collision.collider.tag == "Boss")
+        if (collision.collider.name == "Player")
         {
 
             Damage dmg = new Damage
             {
-                damageAmount = 1,
+                damageAmount = 2,
                 origin = transform.position,
-                pushForce = 2
+                pushForce = 3
             };
 
             collision.collider.SendMessage("ReceiveDamage", dmg);
             Destroy(gameObject);
         }
-        
+
     }
 
 }

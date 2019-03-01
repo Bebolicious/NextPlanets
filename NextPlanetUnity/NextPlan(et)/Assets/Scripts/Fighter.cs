@@ -19,6 +19,11 @@ public class Fighter : MonoBehaviour
     //All fighters can ReceiveDamage / Die
     protected virtual void ReceiveDamage(Damage dmg)
     {
+        if (gameObject.name != "Player")
+        {
+            immuneTime = 0.0f;
+        }
+
         if (Time.time - lastImmune > immuneTime)
         {
             lastImmune = Time.time;

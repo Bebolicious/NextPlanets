@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : Mover
 {
@@ -31,39 +32,36 @@ public class Enemy : Mover
 
     private void FixedUpdate()
     {
-
-        
-    
-
-    
-        
-
-        // Is the player in range?
-        if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
+        if (gameObject.tag != "Boss")
         {
-            if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
-                chasing = true;
-            float hSpeed = 0.75f;
-            animator2.SetFloat("SpeedH", Mathf.Abs(hSpeed));
-
-            if (chasing)
+            // Is the player in range?
+            if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
             {
-                if (!collidingWithPlayer)
+                if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
+                    chasing = true;
+                float hSpeed = 0.75f;
+                animator2.SetFloat("SpeedH", Mathf.Abs(hSpeed));
+
+                if (chasing)
                 {
-                    UpdateMotor((playerTransform.position - transform.position).normalized);
+                    if (!collidingWithPlayer)
+                    {
+                        UpdateMotor((playerTransform.position - transform.position).normalized);
+                    }
+                }
+                else
+                {
+                    UpdateMotor(startingPosition - transform.position);
                 }
             }
             else
             {
                 UpdateMotor(startingPosition - transform.position);
+                chasing = false;
+                float hSpeed = 0f;
+                animator2.SetFloat("SpeedH", Mathf.Abs(hSpeed));
+
             }
-        }
-        else
-        {
-            UpdateMotor(startingPosition - transform.position);
-            chasing = false;
-            float hSpeed = 0f;
-            animator2.SetFloat("SpeedH", Mathf.Abs(hSpeed));
 
         }
 
@@ -89,8 +87,15 @@ public class Enemy : Mover
 
     protected override void Death()
     {
-        Destroy(gameObject);
-        GameManager.instance.GrantXp(xpValue);
-        GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        if (gameObject.name == "RobotBoss")
+        {
+            SceneManager.LoadScene("ThanksForPlaying");
+        }
+        else
+        {
+            Destroy(gameObject);
+            GameManager.instance.GrantXp(xpValue);
+            GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        }
     }
 }

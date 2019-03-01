@@ -56,12 +56,14 @@ public class GameManager : MonoBehaviour
     public int experience;
     public int credits;
     public bool hasWeapon;
+    public bool hasAutoLaser;
     public bool beachQuest;
     public bool craterQuest;
     public bool flowerQuest;
     public bool caveQuest;
     public bool bossQuest;
     public bool lastQuest;
+    public bool hasKeyCard;
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
